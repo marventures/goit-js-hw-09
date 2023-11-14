@@ -44,10 +44,11 @@ const options = {
       startButtonEl.disabled = true;
       datetimePickerEl.disabled = true;
 
+      //   run every 1000 ms (1 second)
       timerID = setInterval(() => {
         const currentTime = Date.now();
 
-        // when the timer ends
+        // when countdown ends -> clear timer
         if (selectedDate < currentTime) {
           clearInterval(timerID);
           datetimePickerEl.disabled = false;
